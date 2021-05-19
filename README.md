@@ -8,7 +8,7 @@ Implements the same algorithm as Facco et al. [1] with possibly one exception. T
     d = - \frac{\log(1 - F(\mu))}{\log(\mu)}
 ```
 
-is done with the denominator as dependent, it is unclear to me how it was done in the paper.
+is done with least squares and the denominator as dependent, it is unclear to me how it was done in the paper.
 
 
 ## References
