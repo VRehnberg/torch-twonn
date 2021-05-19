@@ -55,7 +55,9 @@ def twonn(points, fit_fraction=0.9, plot=False):
         raise RuntimeError("Something went wrong when computing µ.")
 
     # Compute the empirical cumulate
-    empirical = (torch.arange(n_points, dtype=mu.dtype) / n_points).reshape(batch_size, n_points, 1)
+    empirical = (
+        torch.arange(n_points, dtype=mu.dtype) / n_points
+    ).tile(batch_size, 1).unsqueeze(2)
     mu, _ = mu.sort(dim=1)
 
     # Fit the the intrinsic dimension
