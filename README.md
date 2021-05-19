@@ -2,11 +2,11 @@
 A PyTorch implementation of TwoNN for estimating intrinsic dimensions. 
 
 ## Details
-Implements the same algorithm as Facco et al. [1] with possibly one exception. The fitting of *d* from
+Implements the same algorithm as Facco et al. [1] with possibly one exception. The fitting of $`d`$ from
 
-$$
+```math
     d = - \frac{\log(1 - F(\mu))}{\log(\mu)}
-$$
+```
 
 is done with the denominator as dependent, it is unclear to me how it was done in the paper.
 
